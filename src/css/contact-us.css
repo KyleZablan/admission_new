@@ -1,0 +1,240 @@
+:root {
+    /* Colors */
+    --primary: #4E6009;
+    --secondary: #FFFFFF;
+    --text-dark: #000000;
+    --text-gray: #828282;
+    --text-light: #FEF8F8;
+    --background: #F7F7F7;
+    --required: #ff0000;
+    --primary-color: #4E6009;
+    --primary-hover: #0056b3;
+    --secondary-color: #f4f6f8;
+    --accent-color: #ffeb3b;
+    --success-color: #4caf50;
+    --error-color: #f44336;
+    --text-color: #333;
+    --muted-text: #777;
+    --white: #fff;
+    --border-radius: 8px;
+    --font-family: 'Inter', sans-serif;
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    
+    /* Fonts */
+    --font-main: 'Inter', sans-serif;
+    
+    /* Spacing */
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background-color: var(--secondary);
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(rgba(78, 96, 9, 0.5), rgba(78, 96, 9, 0.2)), 
+                url('../img/header-bg.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    padding: var(--space-xl) 0;
+    color: var(--text-light);
+    z-index: 1;
+    min-height: 220px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-xl);
+    text-align: center;
+    z-index: 1;
+}
+
+.top-bar {
+    background-color: var(--primary); 
+    height: 50px;                     
+    width: 100%;
+}
+
+.header-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-top: 50px;
+    margin-bottom: var(--space-lg);
+}
+
+.logo {
+    height: 200px;
+    width: auto;
+    position: absolute;
+    top: 20px;
+    left: 60px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2xl);
+    padding: var(--space-lg) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 1.30rem;
+    font-weight: 700;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.contact-info,
+.contact-form-wrapper {
+    flex: 1 1 300px;
+}
+
+.contact-location h3,
+.contact-form-wrapper h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+.contact-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Card Container */
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow);
+}
+
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    iframe {
+        height: 250px;
+    }
+}
+
+
+
+/* Footer Styles */
+footer {
+    background: var(--primary);
+    color: var(--text-light);
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.footer-main {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-lg);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2xl);
+    margin-top: var(--space-md);
+}
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
